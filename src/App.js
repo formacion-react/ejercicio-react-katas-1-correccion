@@ -1,24 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import { Circulo } from "./componentes/Circulo";
 
 function App() {
+  const nCirculos = 5;
+  const circulos = Array.from(new Array(nCirculos)).map((valor, i) => i);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {circulos.map((circulo) => (
+        <Circulo key={circulo} />
+      ))}
+    </>
   );
 }
 
